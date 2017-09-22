@@ -1,8 +1,8 @@
 <?php
 
 // on recupere les variables title et content
-$title = $_POST['title'];
-$content = $_POST['content'];
+$title = htmlspecialchars($_POST['title']);
+$content = htmlspecialchars($_POST['content']);
 
 if (!is_dir('post')) {
     mkdir('post');
